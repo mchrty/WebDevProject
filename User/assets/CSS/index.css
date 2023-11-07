@@ -1,0 +1,108 @@
+.main-tools {
+  width: 50%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  place-items: center;
+  margin: 8px;
+  gap: 10px;
+  padding: 25px;
+}
+.main-tools button {
+  width: 100%;
+  height: 100%;
+}
+.main-tools button i {
+  font-size: 20px;
+}
+.main-tools button p {
+  margin: 0;
+}
+
+.main-tools button:nth-child(4) {
+  grid-column: 1 / span 3;
+}
+
+/* ! Add An Activity Form */
+.add-activity-form {
+  display: none;
+}
+.add-activity-form.show {
+  display: block !important;
+}
+.add-activity-form form {
+  width: calc(100vw / 3);
+}
+.add-activity-form form .input-field {
+  padding: 10px;
+}
+.add-activity-form form input,
+.add-activity-form form textarea {
+  width: 100%;
+  height: 40px;
+  margin: 5px 0;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  padding: 10px;
+  opacity: 0.7;
+}
+.add-activity-form form input:focus,
+.add-activity-form form textarea:focus {
+  opacity: 1;
+  transform: scale(1.01);
+}
+.add-activity-form form input:hover,
+.add-activity-form form textarea:hover {
+  opacity: 1;
+}
+.add-activity-form form textarea {
+  height: 100px;
+}
+.add-activity-form form input[type="file"] {
+  border: none;
+}
+.add-activity-form .close-add-activity-form:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.pop-up-message {
+  transition: all 0.3s ease-in-out;
+  animation: popup 4s ease-in-out;
+  background: #fff;
+  border: 1px solid #e3e3e3;
+}
+@keyframes popup {
+  0%,
+  100% {
+    top: 0;
+    display: none;
+  }
+  25%,
+  50%,
+  75%,
+  85% {
+    top: 90px;
+    display: block;
+  }
+}
+
+.announcement-container {
+  display: none;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  width: 600px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 20px;
+  border-radius: 10px;
+}
+.announcement-container.show {
+  display: block !important;
+}
+.announcement-container .announcement-div {
+  width: 100%;
+  max-height: 500px;
+  padding: 10px;
+  overflow: auto;
+}
